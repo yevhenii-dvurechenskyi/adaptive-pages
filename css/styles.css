@@ -1,0 +1,310 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: 'Montserrat', sans-serif;
+}
+
+ul {
+	list-style: none;
+}
+
+#container {
+	max-width: 1024px;
+	margin: 0 auto;
+}
+
+.header-inner {
+	padding: 80px 0 41px 0;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	position: relative;
+}
+
+/*Navigation*/
+
+.nav .nav-list {
+	display: flex;
+}
+
+.nav-list .nav-item {
+	margin-left: 80px;
+}
+
+.nav-item-link {
+	font-size: 20px;
+	color: #000;
+	text-decoration: none;
+}
+
+/* Burger menu*/
+.burger-icon {
+	display: none;
+	width: 48px;
+	height: 31px;
+	border: none;
+	background: none;
+	position: absolute;
+	right: 0;
+	top: 70px;
+	outline: none;
+}
+
+.burger-icon-item {
+	width: 48px;
+	height: 5px;
+	background: #000;
+	position: relative;
+	cursor: pointer;
+}
+
+.burger-icon-item::before {
+	content: "";
+	display: block;
+	width: 48px;
+	height: 5px;
+	background: #000;
+	position: absolute;
+	top: -13px;
+	left: 0;
+}
+
+.burger-icon-item::after {
+	content: "";
+	display: block;
+	width: 48px;
+	height: 5px;
+	background: #000;
+	position: absolute;
+	bottom: -13px;
+	left: 0;
+}
+
+/*Carousel */
+
+.carousel {
+	width: 1024px;
+	margin: 0 auto;
+}
+
+.slick-slide img {
+	width: 100%;
+}
+/*main*/
+.mains{
+
+}
+.text{
+	display: block;
+	width: 100%;
+	margin: 0 auto;
+	text-align: center;
+	font-size: 28px;
+	line-height: 34px;
+	margin-bottom: 40px;
+}
+.history{
+	border-top: 1px solid #000;
+	border-bottom: 1px solid #000;
+	height: 80px;
+	width: 100%;
+	margin-bottom: 60px;
+}
+.history span{
+	display: block;
+	height: 80px;
+	width: 100%;
+	font-size: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.black-box-0{
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 60px;
+}
+.black-box{
+	width: 500px;
+	height: 400px;
+	background: #000;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.black-box-text{
+	font-size: 16px;
+	color: #fff;
+	display: block;
+	width: 400px;
+}
+.big{
+	font-size: 48px;
+	line-height: 48px;
+	color: #fff;
+	display: inline-block;
+}
+.input{
+	width: 100%;
+	height: 120px;
+	border: 1px solid #000000;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	margin-bottom: 100px;
+}
+input{
+	width: 600px;
+	height: 120px;
+	border: 0px solid #000000;
+	margin-right: 50px;
+	font-size: 20px;
+}
+button{
+	width: 200px;
+	height: 60px;
+	background: #000;
+	border-radius: 8px;
+	border: 0px;
+	font-size: 28px;
+	line-height: 34px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #fff;
+	
+}
+
+
+@media screen and (max-width: 1024px) {
+	#container, .carousel {
+		max-width: 919px;
+	}
+
+	.nav {
+		display: none;
+	}
+
+	/*Logo*/
+	.header .header-logo {
+		position: absolute;
+		left: 50%;
+		margin-left: -50px;
+		top: 30px;
+	}
+
+	.header.menu-open .logo-svg {
+		fill: #fff;
+	}
+
+	/*Burger*/
+
+	.burger-icon {
+		display: block;
+	}
+
+	/*Menu open*/
+
+	.header.menu-open .nav {
+		display: block;
+	}
+
+	.header.menu-open .header-inner {
+		width: 919px;
+		margin: 0 auto;
+		justify-content: center;
+		padding-top: 200px;
+	}
+
+	.header.menu-open + .carousel {
+		padding-top: 121px;
+	}
+
+	.header.header.menu-open {
+		background: #000;
+		min-height: 316px;
+		position: absolute;
+		top:0;
+		left: 0;
+		width: 100%;
+		z-index: 2;
+	}
+
+	.header.menu-open .burger-icon-item,
+	.header.menu-open .burger-icon-item:before,
+	.header.menu-open .burger-icon-item:after {
+		background: #fff;
+	}
+
+	/*Navigation*/
+
+	.header.menu-open .nav-item-link {
+		color: #fff;
+	}
+
+	.header.menu-open .nav-list .nav-item:first-child {
+		margin-left: 0
+	}
+	/*text*/
+
+	.black-box-0{
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	height: 504px;
+	margin-bottom: 30px;
+	}
+
+	.black-box{
+	width: 99%;
+	height: 214px;
+	background: #000;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	}
+	#big-box{
+		height: 258px;
+	}
+	.black-box-text{
+	font-size: 16px;
+	color: #fff;
+	display: block;
+	width: 832px;
+	}
+}
+
+
+@media screen and (max-width: 375px) {
+	#container, .carousel {
+		max-width: 373px;
+		max-height: 187px;
+	}
+	.slick-slide img {
+	width: 366px;
+	}
+
+	.nav {
+		display: none;
+	}
+	.header .header-logo {
+		position: absolute;
+		left: 0%;
+		top: 30px;
+		display: none;
+	}
+	.text{
+	display: block;
+	width: 100%;
+	margin: 0 auto;
+	text-align: center;
+	font-size: 28px;
+	line-height: 34px;
+	margin-bottom: 40px;
+	height: 308px;
+	}
+}
